@@ -6,6 +6,7 @@
 
 #include <QMessageBox>
 #include <QFontDatabase>
+#include <QDebug>
 
 using namespace usbSensor_protocol;
 
@@ -101,6 +102,8 @@ void MainWindow::receiveMessages()
 			setBarrierOk( pkt->isBarrierOk );
 			isSignalOk_ = pkt->isSignalQualityOk;
 			onConnectedChanged();
+
+			qDebug() << pkt->convolutionAvg;
 		}
 		break;
 
@@ -159,6 +162,9 @@ void MainWindow::on_btnConnect_clicked()
 			continue;
 
 		handle_ = hid_open( dev->vendor_id, dev->product_id, dev->serial_number );
+		if( !handle_ )
+			break;
+
 		hid_set_nonblocking( handle_, 1 );
 
 		lastPong = QDateTime::currentDateTime();

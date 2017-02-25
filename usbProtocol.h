@@ -25,6 +25,7 @@ namespace usbSensor_protocol {
 
 	PACKED_STRUCT Packet_IAmStillAlive{
 		static const PacketType packetType = pktIAmStillAlive;
+		int64_t convolutionAvg;
 		bool isBarrierOk;
 		bool isSignalQualityOk;
 	};

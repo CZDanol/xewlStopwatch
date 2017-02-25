@@ -1,0 +1,2 @@
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="27d9", ENV{ID_MM_DEVICE_IGNORE}="1", \
+    MODE:="0666"
