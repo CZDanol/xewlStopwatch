@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
+    <RootNamespace>fw</RootNamespace>
+    <ProjectName>laserSensor2</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>
+    </PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>
+    </PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\..\Programy\Arduino\libraries;C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7\libraries;C:\Users\Danol\Documents\Arduino\libraries;C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7\cores\tiny;C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7\variants\digispark;$(ProjectDir)..\laserSensor2;C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.8.1-arduino5\avr\include\;C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.8.1-arduino5\avr\include\avr\;C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.8.1-arduino5\lib\gcc\avr\4.9.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>arduino.h;pins_arduino.h;laserSensor2.ino;__vm\.laserSensor2.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATtiny85__;__AVR_ATTINY85__;F_CPU=16500000L;ARDUINO=106012;ARDUINO_AVR_DIGISPARK;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="VisualMicro" />
+  </ItemGroup>
+  <PropertyGroup>
+    <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="laserSensor2.ino">
+      <FileType>CppCode</FileType>
+    </None>
+    <None Include="vusb_asmcommon.inc" />
+    <None Include="vusb_usbdrvasm.S" />
+    <None Include="vusb_usbdrvasm165.inc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="USB.h" />
+    <ClInclude Include="usbProtocol.h" />
+    <ClInclude Include="vusb_osccal.h" />
+    <ClInclude Include="vusb_osctune.h" />
+    <ClInclude Include="vusb_usbconfig.h" />
+    <ClInclude Include="vusb_usbdrv.h" />
+    <ClInclude Include="vusb_usbportability.h" />
+    <ClInclude Include="__vm\.laserSensor2.vsarduino.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="USB.cpp" />
+    <ClCompile Include="vusb_osccal.c" />
+    <ClCompile Include="vusb_usbdrv.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties VM_AUTOGEN_PROTOTYPES="0" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

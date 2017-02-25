@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icon/16x">
+        <file>connect_16x.png</file>
+        <file>cross_16x.png</file>
+        <file>tick_16x.png</file>
+        <file>time_16x.png</file>
+        <file>draw_eraser_16x.png</file>
+        <file>flag_finish_16x.png</file>
+        <file>stopwatch_finish_16x.png</file>
+        <file>draw_line_16x.png</file>
+        <file>line_split_16x.png</file>
+        <file>warning_16x.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>digital_7_mono.ttf</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C5F80730-F44F-4478-BDAE-6634EFC2CA88}</ProjectGuid>
+    <RootNamespace>laserEmitter2</RootNamespace>
+    <ProjectName>laserEmitter2</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>
+    </PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>
+    </PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\..\..\..\Programy\Arduino\libraries;C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7\libraries;C:\Users\Danol\Documents\Arduino\libraries;C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7\cores\tiny;C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7\variants\digispark;$(ProjectDir)..\laserEmitter2;C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.8.1-arduino5\avr\include\;C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.8.1-arduino5\avr\include\avr\;C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.8.1-arduino5\lib\gcc\avr\4.9.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ForcedIncludeFiles>arduino.h;pins_arduino.h;laserEmitter2.ino;__vm\.laserEmitter2.vsarduino.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <IgnoreStandardIncludePath>false</IgnoreStandardIncludePath>
+      <PreprocessorDefinitions>__AVR_ATtiny85__;__AVR_ATTINY85__;F_CPU=16500000L;ARDUINO=106012;ARDUINO_AVR_DIGISPARK;ARDUINO_ARCH_AVR;__cplusplus=201103L;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="VisualMicro" />
+  </ItemGroup>
+  <PropertyGroup>
+    <DebuggerFlavor>VisualMicroDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="laserEmitter2.ino">
+      <FileType>CppCode</FileType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="__vm\.laserEmitter2.vsarduino.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties arduino.upload.maximum_size="6012" arduino.upload.speed="" visualmicro.package.name="digistump" arduino.board.property_bag="name=Digispark (Default - 16.5mhz)&#xD;&#xA;upload.using=micronucleusprog&#xD;&#xA;upload.protocol=usb&#xD;&#xA;upload.tool=micronucleus&#xD;&#xA;upload.maximum_size=6012&#xD;&#xA;build.mcu=attiny85&#xD;&#xA;build.f_cpu=16500000L&#xD;&#xA;build.board=AVR_DIGISPARK&#xD;&#xA;build.core=tiny&#xD;&#xA;build.variant=digispark&#xD;&#xA;upload.wait_for_upload_port=false&#xD;&#xA;upload.use_1200bps_touch=false&#xD;&#xA;upload.disable_flushing=false&#xD;&#xA;runtime.ide.path=D:\Programy\Arduino&#xD;&#xA;runtime.os=windows&#xD;&#xA;build.system.path=C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7\system&#xD;&#xA;runtime.ide.version=106012&#xD;&#xA;target_package=digistump&#xD;&#xA;target_platform=avr&#xD;&#xA;runtime.hardware.path=C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr&#xD;&#xA;originalid=digispark-tiny&#xD;&#xA;intellisense.tools.path={runtime.tools.avr-gcc.path}\&#xD;&#xA;intellisense.include.paths={intellisense.tools.path}avr\include\;{intellisense.tools.path}avr\include\avr\;{intellisense.tools.path}lib\gcc\avr\4.8.1\include&#xD;&#xA;tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram&#xD;&#xA;tools.atprogram.cmd.setwinpath=true&#xD;&#xA;tools.atprogram.program.params.verbose=-v&#xD;&#xA;tools.atprogram.program.params.quiet=-q&#xD;&#xA;tools.atprogram.program.pattern=&quot;{cmd.path}&quot; -d {build.mcu} {program.verbose} {program.extra_params} program -c -f &quot;{build.path}\{build.project_name}.hex&quot;&#xD;&#xA;tools.atprogram.program.xpattern=&quot;{cmd.path}&quot; {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f &quot;{build.path}\{build.project_name}.hex&quot;&#xD;&#xA;tools.atprogram.erase.params.verbose=-v&#xD;&#xA;tools.atprogram.erase.params.quiet=-q&#xD;&#xA;tools.atprogram.bootloader.params.verbose=-v&#xD;&#xA;tools.atprogram.bootloader.params.quiet=-q&#xD;&#xA;tools.atprogram.bootloader.pattern=&quot;{cmd.path}&quot; -d {build.mcu} {bootloader.verbose}  program -c -f &quot;{runtime.ide.path}\hardware\arduino\avr\bootloaders\{bootloader.file}&quot;&#xD;&#xA;version=1.5.4&#xD;&#xA;compiler.path={runtime.tools.avr-gcc.path}/bin/&#xD;&#xA;compiler.c.cmd=avr-gcc&#xD;&#xA;compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD&#xD;&#xA;compiler.c.elf.flags=-Os -Wl,--gc-sections&#xD;&#xA;compiler.c.elf.cmd=avr-gcc&#xD;&#xA;compiler.S.flags=-c -g -x assembler-with-cpp&#xD;&#xA;compiler.cpp.cmd=avr-g++&#xD;&#xA;compiler.cpp.flags=-c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -MMD&#xD;&#xA;compiler.ar.cmd=avr-ar&#xD;&#xA;compiler.ar.flags=rcs&#xD;&#xA;compiler.objcopy.cmd=avr-objcopy&#xD;&#xA;compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0&#xD;&#xA;compiler.elf2hex.flags=-O ihex -R .eeprom&#xD;&#xA;compiler.elf2hex.cmd=avr-objcopy&#xD;&#xA;compiler.ldflags=&#xD;&#xA;compiler.size.cmd=avr-size&#xD;&#xA;build.extra_flags=&#xD;&#xA;recipe.c.o.pattern=&quot;{compiler.path}{compiler.c.cmd}&quot; {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;&#xD;&#xA;recipe.cpp.o.pattern=&quot;{compiler.path}{compiler.cpp.cmd}&quot; {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;&#xD;&#xA;recipe.S.o.pattern=&quot;{compiler.path}{compiler.c.cmd}&quot; {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {build.extra_flags} {includes} &quot;{source_file}&quot; -o &quot;{object_file}&quot;&#xD;&#xA;recipe.ar.pattern=&quot;{compiler.path}{compiler.ar.cmd}&quot; {compiler.ar.flags} &quot;{archive_file_path}&quot; &quot;{object_file}&quot;&#xD;&#xA;recipe.c.combine.pattern=&quot;{compiler.path}{compiler.c.elf.cmd}&quot; {compiler.c.elf.flags} -mmcu={build.mcu} -o &quot;{build.path}/{build.project_name}.elf&quot; {object_files} &quot;{archive_file_path}&quot; &quot;-L{build.path}&quot; -lm&#xD;&#xA;recipe.objcopy.eep.pattern=&quot;{compiler.path}{compiler.objcopy.cmd}&quot; {compiler.objcopy.eep.flags} &quot;{build.path}/{build.project_name}.elf&quot; &quot;{build.path}/{build.project_name}.eep&quot;&#xD;&#xA;recipe.objcopy.hex.pattern=&quot;{compiler.path}{compiler.elf2hex.cmd}&quot; {compiler.elf2hex.flags} &quot;{build.path}/{build.project_name}.elf&quot; &quot;{build.path}/{build.project_name}.hex&quot;&#xD;&#xA;recipe.size.pattern=&quot;{compiler.path}{compiler.size.cmd}&quot; -A &quot;{build.path}/{build.project_name}.elf&quot;&#xD;&#xA;recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*&#xD;&#xA;recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*&#xD;&#xA;recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*&#xD;&#xA;tools.micronucleus.cmd.path={runtime.tools.micronucleus.path}/launcher&#xD;&#xA;tools.micronucleus.upload.params.verbose=&#xD;&#xA;tools.micronucleus.upload.params.quiet=&#xD;&#xA;tools.micronucleus.upload.pattern=&quot;{cmd.path}&quot; -cdigispark --timeout 60 -Uflash:w:{build.path}/{build.project_name}.hex:i&#xD;&#xA;build.usb_manufacturer=&#xD;&#xA;build.usb_flags=&#xD;&#xA;vm.platform.root.path=D:\Programy\MSVC2015\Common7\IDE\Extensions\jpslzdvw.l2t\Micro Platforms\arduino16x&#xD;&#xA;micronucleusprog.name=Micronucleus&#xD;&#xA;micronucleusprog.communication=usb&#xD;&#xA;micronucleusprog.protocol=micronucleus&#xD;&#xA;micronucleusprog.program.tool={runtime.tools.micronucleus.path}/micronucleus&#xD;&#xA;micronucleusprog.program.extra_params=-Pusb&#xD;&#xA;runtime.tools.avr-gcc.path=C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.8.1-arduino5&#xD;&#xA;runtime.tools.avr-gcc-4.8.1-arduino2.path=C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.8.1-arduino5&#xD;&#xA;runtime.tools.micronucleus.path=C:\Users\Danol\AppData\Local\arduino15\packages\digistump\tools\micronucleus\2.0a4&#xD;&#xA;runtime.tools.micronucleus-2.0a4.path=C:\Users\Danol\AppData\Local\arduino15\packages\digistump\tools\micronucleus\2.0a4&#xD;&#xA;runtime.tools.avrdude.path=C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avrdude\6.3.0-arduino6&#xD;&#xA;runtime.tools.avrdude-6.3.0-arduino2.path=C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avrdude\6.3.0-arduino6&#xD;&#xA;runtime.tools.avr-gcc-4.9.2-atmel3.5.3-arduino.path=C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.9.2-atmel3.5.3-arduino2&#xD;&#xA;runtime.vm.boardinfo.id=digistump_digispark-tiny&#xD;&#xA;runtime.vm.boardinfo.name=digistump_digispark-tiny&#xD;&#xA;runtime.vm.boardinfo.desc=Digispark (Default - 16.5mhz)&#xD;&#xA;runtime.vm.boardinfo.src_location=C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7&#xD;&#xA;ide.hint=For all platforms that use Board Manager&#xD;&#xA;ide.location.key=Arduino16x&#xD;&#xA;ide.location.ide.winreg=Arduino 1.6.x Application&#xD;&#xA;ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook&#xD;&#xA;ide.location.sketchbook.preferences=sketchbook.path&#xD;&#xA;ide.default.revision_name=1.8.0&#xD;&#xA;ide.default.version=10800&#xD;&#xA;ide.default.package=arduino&#xD;&#xA;ide.default.platform=avr&#xD;&#xA;ide.multiplatform=true&#xD;&#xA;ide.includes=arduino.h&#xD;&#xA;ide.exe_name=arduino&#xD;&#xA;ide.platformswithoutpackage=false&#xD;&#xA;ide.includes.fallback=wprogram.h&#xD;&#xA;ide.extension=ino&#xD;&#xA;ide.extension.fallback=pde&#xD;&#xA;ide.versionGTEQ=160&#xD;&#xA;ide.exe=arduino.exe&#xD;&#xA;ide.hosts=atmel&#xD;&#xA;ide.url=http://arduino.cc/en/Main/Software&#xD;&#xA;ide.help.reference.path=reference&#xD;&#xA;ide.help.reference.path2=reference\www.arduino.cc\en\Reference&#xD;&#xA;ide.help.reference.serial=reference\www.arduino.cc\en\Serial&#xD;&#xA;vm.debug=true&#xD;&#xA;software=ARDUINO&#xD;&#xA;ssh.user.name=root&#xD;&#xA;ssh.user.default.password=arduino&#xD;&#xA;ssh.host.wwwfiles.path=/www/sd&#xD;&#xA;build.working_directory={runtime.ide.path}&#xD;&#xA;ide.location.preferences.portable={runtime.ide.path}\portable&#xD;&#xA;ide.location.preferences=%VM_APPDATA_LOCAL%\arduino15\preferences.txt&#xD;&#xA;ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino15\preferences.txt&#xD;&#xA;ide.location.contributions=%VM_APPDATA_LOCAL%\arduino15&#xD;&#xA;ide.location.contributions_fallback=%VM_APPDATA_ROAMING%\arduino15&#xD;&#xA;ide.contributions.boards.allow=true&#xD;&#xA;ide.contributions.boards.ignore_unless_rewrite_found=true&#xD;&#xA;ide.contributions.libraries.allow=true&#xD;&#xA;ide.contributions.boards.support.urls.wiki=https://github.com/arduino/Arduino/wiki/Unofficial-list-of-3rd-party-boards-support-urls&#xD;&#xA;ide.create_platforms_from_boardsTXT.teensy=build.core&#xD;&#xA;ide.appid=arduino16x&#xD;&#xA;location.sketchbook=C:\Users\Danol\Documents\Arduino&#xD;&#xA;build.core.path=C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7\cores\tiny&#xD;&#xA;vm.core.include=arduino.h&#xD;&#xA;runtime.vm.programmer.invalid=true&#xD;&#xA;vm.boardsource.path=C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7&#xD;&#xA;runtime.platform.path=C:\Users\Danol\AppData\Local\arduino15\packages\digistump\hardware\avr\1.6.7&#xD;&#xA;vm.platformname.name=avr&#xD;&#xA;build.arch=AVR&#xD;&#xA;builder.noino=false&#xD;&#xA;build.architecture=4.8.1-arduino5&#xD;&#xA;vmresolved.compiler.path=C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.8.1-arduino5\bin\&#xD;&#xA;vmresolved.tools.path=C:\Users\Danol\AppData\Local\arduino15\packages\arduino\tools\avr-gcc\4.8.1-arduino5&#xD;&#xA;build.path=C:\Users\Danol\AppData\Local\Temp\VMBuilds\fw\digistump_digispark-tiny\Debug&#xD;&#xA;build.project_name=fw.ino&#xD;&#xA;build.project_path=D:\Tvorba\Qt\XewlStopwatch\fw&#xD;&#xA;ProjectDir=D:\Tvorba\Qt\XewlStopwatch\fw\&#xD;&#xA;" visualmicro.application.name="arduino16x" arduino.build.mcu="attiny85" arduino.upload.protocol="usb" arduino.build.f_cpu="16500000L" arduino.board.desc="Digispark (Default - 16.5mhz)" arduino.board.name="digistump_digispark-tiny" arduino.upload.port="COM5" visualmicro.platform.name="avr" arduino.build.core="tiny" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

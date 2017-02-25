@@ -1,0 +1,8 @@
+firmware/laserSensor2/__vm/
+build/
+firmware/laserSensor2/.vs/
+firmware/laserSensor2/Debug/
+firmware/laserEmitter2/Debug/
+firmware/laserEmitter2/__vm/
+firmware/laserEmitter2/.vs/
+bin/
