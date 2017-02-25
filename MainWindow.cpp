@@ -139,14 +139,17 @@ void MainWindow::updateTimes()
 
 void MainWindow::updateBarrierOkBlink()
 {
-	ui->lblLapTime->setStyleSheet( QString( "background: %1;" ).arg( barrierOkBlinkRed_ ? "red" : "white" ) );
+	ui->lblLapTime->setStyleSheet( QString( "padding: 5px; color: black; background: %1;" ).arg( barrierOkBlinkRed_ ? "red" : "white" ) );
 	barrierOkBlinkRed_ = !barrierOkBlinkRed_;
 }
 
 void MainWindow::on_btnConnect_clicked()
 {
-	hid_device_info *devices = hid_enumerate( 0x0, 0x0 );
+	hid_device_info *devices = hid_enumerate( 0x16c0, 0x27d9 );
 	SCOPE_EXIT( hid_free_enumeration( devices ) );
+
+	if( handle_ )
+		hid_close( handle_ );
 
 	for( hid_device_info *dev = devices; dev; dev = dev->next ) {
 		const QString manufacturer = QString::fromWCharArray( dev->manufacturer_string );
@@ -155,16 +158,17 @@ void MainWindow::on_btnConnect_clicked()
 		if( manufacturer != "straw-solutions.cz" || product != "Times Machine Light barrier" )
 			continue;
 
-		if( handle_ )
-			hid_close( handle_ );
-
 		handle_ = hid_open( dev->vendor_id, dev->product_id, dev->serial_number );
 		hid_set_nonblocking( handle_, 1 );
 
 		lastPong = QDateTime::currentDateTime();
 
 		emit onConnectedChanged();
+		return;
 	}
+
+	emit onConnectedChanged();
+	QMessageBox::critical( this, tr("Chyba"), tr("Senzor nebyl nalezen. Zkontrolujte, zda existuje. Pokud jste na Linuxu, přidejte udev pravidlo.") );
 }
 
 void MainWindow::on_btnStart_clicked()
